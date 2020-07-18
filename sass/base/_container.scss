@@ -1,0 +1,64 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    max-width: 1600px;
+    margin: 0;
+    padding: 0;
+}
+
+ul a,
+a{
+    text-decoration: none;
+}
+
+h2,
+h3{
+    color: var(--title-text-color);
+}
+
+h2{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.16;
+    text-align: center;
+}
+
+ul li{
+    list-style: none;
+} 
+
+h1,h2,h3,h4,h5,h6,ul,p,svg,img{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

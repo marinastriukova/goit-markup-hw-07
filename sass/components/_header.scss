@@ -1,0 +1,100 @@
+/*HEADER*/
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    background-color: $white-color;
+    font-weight: 500;
+    
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.header-nav{
+    @include flex;
+}
+
+.menu-nav{
+    display: flex;
+
+    &-items{
+        margin-left: 86px;
+
+        &+&{
+            margin-left: 50px;
+        }
+    }
+
+    &-link{
+        display: block;
+        position: relative;
+        padding-bottom: 32px;
+        padding-top: 32px;
+        color: $title-text-color;
+        @include transition(color);
+    }
+}
+
+.current{
+    color: $accent-color;
+
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    
+        height: 4px;
+        width: 100%;
+        border-radius: 2px;
+        background-color: $accent-color;
+    }
+}
+
+.menu-nav-link:hover,
+.menu-nav-link:focus{
+    color: $accent-color;
+}
+
+
+.contact-nav{
+    display: flex;
+    margin-left: auto;
+    align-self: center;
+
+    &-items + &-items{
+        margin-left: 30px;
+    }
+
+    &-link{
+        display: inline-flex;
+        color: $primary-text-color;
+        @include transition(color);
+    }
+
+    &-icon{
+        fill: $primary-text-color;
+        width: 16px;
+        height: 15px;
+        margin-right: 10px;
+        @include transition(fill);
+    }
+}
+
+
+.contact-nav-link{
+
+    &:focus, &:hover{
+    color: $accent-color;
+
+        & .contact-nav-icon{
+        fill: $accent-color;
+        }
+    }
+}
+
+
+
